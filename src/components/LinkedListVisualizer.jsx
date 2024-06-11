@@ -63,28 +63,33 @@ const LinkedListVisualizer = () => {
   };
 
   return (
-    <div>
-      <input
+    <div className='main-container'>
+      <input className='text-boxes'
         type="number"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
         placeholder="Enter value"
       />
+      <div className='buttons'>
       <button onClick={handleInsertAtBeginning}>Insert at Beginning</button>
       <button onClick={handleInsertAtEnd}>Insert at End</button>
       <button onClick={handleDeleteFromBeginning}>Delete from Beginning</button>
       <button onClick={handleDeleteFromEnd}>Delete from End</button>
       <button onClick={handleDeleteGivenValue}>Delete Given Value</button>
+      </div>
       <input
+      className='text-boxes'
         type="number"
         value={searchValue}
         onChange={(e) => setSearchValue(e.target.value)}
         placeholder="Enter value to search"
       />
       <button onClick={handleSearch}>Search</button>
-      <h2>Linked List:</h2>
-      <p>{linkedList.printList()}</p>
-      {message && <p>{message}</p>}
+     <div className='result'>
+        <h2>Linked List:</h2>
+        <p className='list'>{linkedList.printList()}</p>
+        {message && <p>{message}</p>}
+     </div>
     </div>
   );
 }
