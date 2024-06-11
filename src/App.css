@@ -1,0 +1,15 @@
+/* src/App.css */
+.LinkedListVisualizer {
+  text-align: center;
+}
+
+.LinkedListVisualizer div {
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid black;
+  margin: 5px;
+}
+
+input, button {
+  margin: 5px;
+}
